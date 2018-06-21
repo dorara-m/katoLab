@@ -1,0 +1,63 @@
+.wrapper {
+	display: flex;
+	height: 100vh;
+	color: $textColor;
+	.left {
+		font-family: $headFont;
+		width: 50%;
+		z-index: 1000;
+		box-shadow: 3px 0 4px rgba(0,0,0, 0.5);
+		position: relative; 
+		&__text {
+			position: absolute;
+			left: calc(50% - 150px);
+			height: 100%;
+			&__title {
+				padding-top: 120px;
+				margin-bottom: 100px;
+				h1 {
+					font-size: 75px;
+					font-family: $titleFont;
+					margin-bottom: 10px;
+					font-weight: normal;
+				}
+				p {
+					font-size: 24px;
+					font-family: $textFont;
+				}
+			}
+			&__menu {
+				li {
+					margin-bottom: 32px;
+					font-size: 20px;
+					h2 {
+						font-weight: normal;
+						display: inline-block;
+						transition: all .5s ease;						
+						&:hover {
+							color: #00a99d;
+						}
+					}
+				}
+			}
+		}
+		&__copyright {
+			font-size: 10px;
+			position: absolute;
+			bottom: 50px;
+			right: 40px;
+		}
+	}
+
+	.right {
+		background-color: #ddd;
+		width: 50%;
+		background-image: url(../../images/apple.png);
+		background-repeat: no-repeat;
+		background-size: cover;
+		&__overlay {
+			background-color: rgba(0,0,0, 0.2);
+			height: 100%;
+		}
+	}
+}

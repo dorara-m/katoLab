@@ -1,0 +1,44 @@
+// ==========================================================================
+// Foundations
+// ==========================================================================
+@import "../foundations/_reset";
+@import "../foundations/_base";
+
+// =========================================================================
+// Layouts
+// ==========================================================================
+@import "../layouts/_main";
+
+// =========================================================================
+// utilties
+// ==========================================================================
+@import "../utilities/_margin";
+
+// -----------------------------------------------------------------
+// pages
+// ----------------------------------------------------------------
+
+.right__article__body__section {
+	&__table {
+		&__title {
+			font-size: 18px;
+		}
+		table {
+			border-collapse:collapse;
+			line-height: 1.4;
+			font-size: 14px;
+			font-family: $headFont;
+			th {
+				background-color: #d8d8d8;
+				padding:7px 12px;
+				border: solid 1px $textColor;
+				font-weight: normal;
+				text-align: left;
+			}
+			td {
+				padding:5px 12px;
+				border: solid 1px $textColor;
+			}
+		}
+	}
+}
