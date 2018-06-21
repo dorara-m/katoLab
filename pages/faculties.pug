@@ -1,0 +1,18 @@
+extends ../includes/_layout-pages
+
+block title
+  title Faculties
+  meta(name='description', content='Faculties/加藤研究室')
+
+block styles
+  link(rel='stylesheet', href='../styles/pages/faculties.css')
+
+block content
+  article.article
+    h1.article__pageTitle <span>F</span>aculties
+    .article__body
+      include ../includes/data/_faculties
+      each val in faculties
+        a(href=val.link).article__body__section
+          img.article__body__section__icon(src=`../../images/${val.image}`)
+          h2.article__body__section__name=val.name

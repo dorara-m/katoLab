@@ -11,17 +11,17 @@ html
       link(rel='stylesheet', href='../styles/pages/about.css')
   body
     .wrapper
+      img.wrapper__backImg(src='../images/apple-white.png')
       nav.left
         a(href='../index.html').left__title
           h1 KATO LAB.
           p 加藤研究室
         ul.left__menu
-          include ../includes/_pages
+          include data/_pages
           each item in pages
             li 
               h2
                 block menuLink
                   a(href=`../${item.link}`)=item.name
-      section.right
-        img.right__backImg(src='../images/apple-white.png')
+      main.main
         block content
