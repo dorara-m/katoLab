@@ -8,21 +8,18 @@ html
 
     link(rel='stylesheet', href='styles/app.css')
   body
-    .wrapper
-      section.left
-        .left__text
-          .left__text__title
-            h1 KATO LAB.
-            p 心理とスポーツとIT研究室
-          ul.left__text__menu
-            include includes/data/_pages
-            each item in pages
-              li
-                h2
-                  a(href=item.link)=item.name
-        .left__copyright
-          p Created by MapleMomiji
-      section.right
-        .right__overlay
+    .l-wrapper
+      header.header--top.u-flex.u-flex__vertical: .l-container
+        h1.header--top__title.u-mB5 KATO LAB.
+        p.header--top__subtitle 心理とスポーツとIT研究室
+      main.main--top: .l-container
+        nav.nav--top: ul
+          include includes/data/_pages
+          each item in pages
+              li.nav--top__item: h2: a(href=item.link)=item.name
+        .copyright: p Created by MM
+        .bgimg
+          .bgimg-overlay
+          img(src='images/apple-white.png')
 
     script(src='scripts/main.js')

@@ -1,3 +1,7 @@
+.l-wrapper {
+	color: $black;	
+}
+
 .l-container {
 	width: 980px;
 	margin: 0 auto;
@@ -36,11 +40,11 @@
 		p {
 			font-size: 20px;
 			margin-top: 10px;
-			font-family: $textFont;
+			font-family: $enFont;
 		}
 	}
 	&__menu {
-		font-family: $headFont;
+		font-family: $titleFont;
 		margin-top: 100px;
 		li {
 			margin-bottom: 20px;
