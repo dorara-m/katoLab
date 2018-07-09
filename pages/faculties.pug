@@ -8,11 +8,10 @@ block styles
   link(rel='stylesheet', href='../styles/pages/faculties.css')
 
 block content
-  article.article
-    h1.article__pageTitle <span>F</span>aculties
-    .article__body
-      include ../includes/data/_faculties
-      each val in faculties
-        a(href=`faculties/${val.link}`).article__body__section
-          img.article__body__section__icon(src=`../../images/${val.image}`)
-          h2.article__body__section__name=val.name
+  h2.main__title <span>F</span>aculties
+  .main__body.u-flex.u-flex__wrap
+    include ../includes/data/_faculties
+    each val in faculties
+      a(href=`faculties/${val.link}`).main__section
+        img.main__section__icon(src=`../../images/${val.image}`)
+        h2.main__section__name=val.name

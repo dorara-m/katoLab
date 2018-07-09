@@ -4,38 +4,78 @@
 
 @import "utilities/_margin";
 @import "utilities/_flex";
+@import "utilities/_display";
+
+.l-wrapper {
+	color: $black;
+	@include mq-up() {
+		width: 90%;
+		max-width: 960px;
+		margin: 0 auto;
+	}
+}
 
 .l-container {
 	width: 100%;
 	padding: 0 35px;
+	@include mq-up() {
+		padding: 0;
+	}	
 }
 
 .header--top {
 	width: 100%;
 	height: 140px;
 	box-shadow:0px 2px 4px #999;
+	@include mq-up() {
+		width: 335px;
+		box-shadow: none;
+		margin-top: 120px;
+	}
 	&__title {
+		font-weight: normal;
 		font-size: 48px;
 		font-family: $titleFont;
+		@include mq-up() {
+			font-size: 85px;
+		}
 	}
 	&__subtitle {
 		font-size: 18px;
 		font-family: $jaFont;
+		@include mq-up() {
+			margin-top: 20px;
+			font-size: 24px;
+		}
 	}
 }
 
 .main--top {
 	height: calc(100vh - 140px);
 	font-family: $enFont;
+	@include mq-up() {
+		height: auto;
+		width: 50%;
+	}
 }
 
 .nav--top {
 	padding-top: 40px;
+	@include mq-up() {
+		padding-top: 100px;
+	}
 	&__item {
 		font-size: 18px;
 		margin-bottom: 24px;
-		h2 {
+		@include mq-up() {
+			font-size: 20px;
+		}
+		h2 a {
 			font-weight: normal;
+			transition: color .5s ease;
+			&:hover {
+				color: $lightGreen;
+			}
 		}
 	}
 }
@@ -44,11 +84,14 @@
 	font-size: 12px;
 	position: absolute;
 	bottom: 20px;
+	@include mq-up() {
+		right: calc(50% + 40px);
+	}
 }
 
 .bgimg {
 	position: fixed;
-	right: -90px;
+	right: -80px;
 	bottom: 20px;
 	img {
 		width: 292px;
@@ -57,63 +100,18 @@
 	}
 }
 
-.wrapper {
-	.left {
-		font-family: $titleFont;
-		width: 50%;
-		z-index: 1000;
-		box-shadow: 3px 0 4px rgba(0,0,0, 0.5);
-		position: relative; 
-		&__text {
-			position: absolute;
-			left: calc(50% - 150px);
-			height: 100%;
-			&__title {
-				padding-top: 120px;
-				margin-bottom: 100px;
-				h1 {
-					font-size: 75px;
-					font-family: $titleFont;
-					margin-bottom: 10px;
-					font-weight: normal;
-				}
-				p {
-					font-size: 24px;
-					font-family: $jaFont;
-				}
-			}
-			&__menu {
-				li {
-					margin-bottom: 32px;
-					font-size: 20px;
-					h2 {
-						font-weight: normal;
-						display: inline-block;
-						transition: all .5s ease;						
-						&:hover {
-							color: #00a99d;
-						}
-					}
-				}
-			}
-		}
-		&__copyright {
-			font-size: 10px;
-			position: absolute;
-			bottom: 50px;
-			right: 40px;
-		}
-	}
-
-	.right {
-		background-color: #ddd;
-		width: 50%;
-		background-image: url(../../images/apple.png);
-		background-repeat: no-repeat;
-		background-size: cover;
-		&__overlay {
-			background-color: rgba(0,0,0, 0.2);
-			height: 100%;
-		}
+.bg-pc {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	width: 50%;
+	background-image: url(../../images/apple.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	box-shadow: -1px 0px 4px #444;
+	&__overlay {
+		background-color: rgba(0,0,0, 0.2);
+		height: 100%;
 	}
 }

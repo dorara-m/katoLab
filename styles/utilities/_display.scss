@@ -1,0 +1,13 @@
+.u-hide {
+	display: block;
+	@include mq-up() {
+		display: none;
+	}
+}
+
+.u-show {
+  display: none;
+  @include mq-up() {
+    display: block;
+  }
+}
