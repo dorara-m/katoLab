@@ -1,0 +1,24 @@
+extends ../includes/_layout
+
+block title
+  title Events
+  meta(name='description', content='Events/加藤研究室')
+
+block styles
+  link(rel='stylesheet', href='../styles/pages/events.css')
+
+block content
+  h2.main__title
+    span E
+    | vents
+  .main__body
+    .main__section
+      p 当研究室における学会活動、イベントなどを掲示しています。
+    include ../includes/data/_events
+    .main__section
+      h3 2017年度
+      ul.main__lists
+        each val in events2017
+          li
+            p.main__lists__date #{val.date}
+            p.main__lists__title #{val.title}

@@ -1,4 +1,8 @@
-extends _layout-items
+extends ../../includes/_layout-items
 
-block content
-  +item(2)
+block teacher
+  - var teacher = faculties[2];
+
+block add
+  h3 HP
+  p: a(href='http://www.kanseismile.com/').c-link http://www.kanseismile.com/

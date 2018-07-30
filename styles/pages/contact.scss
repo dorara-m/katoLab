@@ -1,0 +1,22 @@
+@import "../foundations/_reset";
+@import "../foundations/_base";
+@import "../foundations/_responsive";
+
+@import "../layouts/_main";
+
+@import "../components/_caption";
+
+@import "../utilities/_margin";
+@import "../utilities/_flex";
+@import "../utilities/_display";
+
+.Contact {
+	text-decoration: line-through;
+}
+
+.main__section {
+  i {
+    font-size: 40px;
+    color: #3b5998;
+  }
+}

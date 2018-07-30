@@ -8,38 +8,38 @@ html
       title Faculties
     
     link(rel='stylesheet', href='../../styles/pages/faculties-item.css')
-    link(href="https://unpkg.com/ionicons@4.1.2/dist/css/ionicons.min.css" rel="stylesheet")
   body
-    .wrapper
-      img.wrapper__backImg(src='../../images/apple-white.png')
-      nav.left
-        a(href='../../index.html').left__title
-          h1 KATO LAB.
-          p 加藤研究室
-        ul.left__menu
+    .l-wrapper
+      header.l-header
+        .l-header__title.u-show
+          h1: a(href="../../index.html") KATO LAB.
+          p 心理とスポーツとIT研究室
+        nav.l-header__menu: ul
           include data/_pages
           each item in pages
-            li 
-              h2
-                block menuLink
-                  a(href=`../../${item.link}`)=item.name
+            li: h2
+              block menuLink
+                a(href=`../../${item.link}` class=item.name)=item.name
       main.main
-        article.article
-          h1.article__pageTitle <span>F</span>aculties
-          .article__body
-            include data/_faculties
-            block teacher
-              - var teacher = faculties[0];
-            .article__body__summary
-              img.article__body__summary__icon(src=`../../images/${teacher.image}`)
-              .article__body__summary__text
-                h2.article__body__summary__text__name=teacher.name
-                  span=teacher.position
-                .article__body__summary__text__field 専攻: #{teacher.field}
-                .article__body__summary__text__contact 連絡先: #{teacher.address}
-                  a(href=`mailto:${teacher.address}`).article__body__summary__text__contact__mail
-                    i.article__body__summary__text__contact__mail__icon.icon.ion-ios-send
-                    .article__body__summary__text__contact__mail__caption メールを送信する
-            .article__body__section
-              h3.article__body__section__title 自己紹介文
-              p=teacher.introduction
+        img(src='../../images/apple-white.png').bgImg.u-show
+        h2.main__title <span>F</span>aculties
+        .main__body
+          include data/_faculties
+          block teacher
+            - var teacher = faculties[0];
+          .main__section__top
+            img(src=`../../images/${teacher.image}`)
+            h3=teacher.name
+                span=teacher.position
+          .main__section
+            h3 専攻
+            p #{teacher.field}
+            h3 連絡先
+            p: a.c-link(href=`mailto:${teacher.address}`)=teacher.address
+            h3 自己紹介文
+            p=teacher.introduction
+            block add
+      
+      footer.l-footer
+        a(href='../index.html'): img.l-footer__img(src='../../images/apple-white.png')
+        .copyright: p Created by MM

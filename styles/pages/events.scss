@@ -1,0 +1,34 @@
+@import "../foundations/_reset";
+@import "../foundations/_base";
+@import "../foundations/_responsive";
+
+@import "../layouts/_main";
+
+@import "../utilities/_margin";
+@import "../utilities/_flex";
+@import "../utilities/_display";
+
+.Events {
+	text-decoration: line-through;
+}
+
+h3 {
+  font-size: 18px;
+  @include mq-up() {
+    font-size: 20px;
+  }
+}
+
+.main__lists {
+  li {
+    padding: 7px 10px;
+    border-bottom: 1px solid $gray;
+    display: flex;
+  }
+  &__date {
+    width: 20%;
+  }
+  &__title {
+    flex: 1;
+  }
+}
