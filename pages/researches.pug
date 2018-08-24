@@ -19,7 +19,18 @@ block content
       .main__table
         h4 心理
         ul
-          each val in [{title: '大学陸上競技選手の心理的競技能力の向上に関する研究', author: '唐本直登, 山下優嘉, 鏑木大樹, 根来健太', isCollaborate: true}, {title: '大学生を対象とした筋力トレーニングに関する調査研究-心理的サポートによるモチベーションの維持・向上に着目して-',author: '小川令央那, 永井達成', isCollaborate: false}]
+          -
+            var item = [
+                {
+                  title: '大学陸上競技選手の心理的競技能力の向上に関する研究', author: '唐本直登, 山下優嘉, 鏑木大樹, 根来健太',
+                  isCollaborate: true
+                },
+                {
+                  title: '大学生を対象とした筋力トレーニングに関する調査研究-心理的サポートによるモチベーションの維持・向上に着目して-',
+                  author: '小川令央那, 永井達成'
+                }
+              ]
+          each val in item
             li
               p 
                 span #{val.isCollaborate ? '★' : ''}
@@ -28,28 +39,179 @@ block content
       .main__table
         h4 スポーツ
         ul
-          each val in [{title: '大学陸上競技選手の心理的競技能力の向上に関する研究', author: '唐本直登, 山下優嘉, 鏑木大樹, 根来健太', isCollaborate: true}, {title: '大学生を対象とした筋力トレーニングに関する調査研究-心理的サポートによるモチベーションの維持・向上に着目して-',author: '小川令央那, 永井達成', isCollaborate: false}]
+          -
+            var item = [
+              {
+                title: '大学陸上競技選手の心理的競技能力の向上に関する研究', author: '唐本直登, 山下優嘉, 鏑木大樹, 根来健太'
+              },
+              {
+                title: '大学生を対象とした筋力トレーニングに関する調査研究-心理的サポートによるモチベーションの維持・向上に着目して-'
+              }
+            ]
+          each val in item
+            li
+              p 
+                span #{val.isCollaborate ? '★' : ''}
+                | #{val.title}
+              p.main__table__auth=val.author
+
+    .main__section
+      h3 2016年度
+      .main__table
+        h4 心理
+        ul
+          -
+            var item = [
+              {
+                title: '大学陸上競技選手の心理的競技能力の向上に関する研究', author: '唐本直登, 山下優嘉, 鏑木大樹, 根来健太'
+              },
+              {
+                title: '大学生を対象とした筋力トレーニングに関する調査研究-心理的サポートによるモチベーションの維持・向上に着目して-'
+              }
+            ]
+          each val in item
+            li
+              p 
+                span #{val.isCollaborate ? '★' : ''}
+                | #{val.title}
+              p.main__table__auth=val.author
+      .main__table
+        h4 スポーツ
+        ul
+          -
+            var item = [
+              {
+                title: '大学陸上競技選手の心理的競技能力の向上に関する研究', author: '唐本直登, 山下優嘉, 鏑木大樹, 根来健太'
+              },
+              {
+                title: '大学生を対象とした筋力トレーニングに関する調査研究-心理的サポートによるモチベーションの維持・向上に着目して-'
+              }
+            ]
+          each val in item
             li
               p 
                 span #{val.isCollaborate ? '★' : ''}
                 | #{val.title}
               p.main__table__auth=val.author
       
+    .main__section
+      h3 2015年度
+      .main__table
+        h4 心理
+        ul
+          -
+            var item = [
+                {
+                  title: '大学陸上競技選手の心理的競技能力の向上に関する研究', author: '唐本直登, 山下優嘉, 鏑木大樹, 根来健太',
+                  isCollaborate: true
+                },
+                {
+                  title: '大学生を対象とした筋力トレーニングに関する調査研究-心理的サポートによるモチベーションの維持・向上に着目して-',
+                  author: '小川令央那, 永井達成'
+                }
+              ]
+          each val in item
+            li
+              p 
+                span #{val.isCollaborate ? '★' : ''}
+                | #{val.title}
+              p.main__table__auth=val.author
+      .main__table
+        h4 スポーツ
+        ul
+          -
+            var item = [
+              {
+                title: '大学陸上競技選手の心理的競技能力の向上に関する研究', author: '唐本直登, 山下優嘉, 鏑木大樹, 根来健太'
+              },
+              {
+                title: '大学生を対象とした筋力トレーニングに関する調査研究-心理的サポートによるモチベーションの維持・向上に着目して-'
+              }
+            ]
+          each val in item
+            li
+              p 
+                span #{val.isCollaborate ? '★' : ''}
+                | #{val.title}
+              p.main__table__auth=val.author
+
       .main__table
         h4 IT
         ul
-          each val in [{title: '大学陸上競技選手の心理的競技能力の向上に関する研究', author: '唐本直登, 山下優嘉, 鏑木大樹, 根来健太', isCollaborate: true}, {title: '大学生を対象とした筋力トレーニングに関する調査研究-心理的サポートによるモチベーションの維持・向上に着目して-',author: '小川令央那, 永井達成', isCollaborate: false}]
+          -
+            var item = [
+              {
+                title: '大学陸上競技選手の心理的競技能力の向上に関する研究', author: '唐本直登, 山下優嘉, 鏑木大樹, 根来健太'
+              },
+              {
+                title: '大学生を対象とした筋力トレーニングに関する調査研究-心理的サポートによるモチベーションの維持・向上に着目して-'
+              }
+            ]
+          each val in item
+            li
+              p 
+                span #{val.isCollaborate ? '★' : ''}
+                | #{val.title}
+              p.main__table__auth=val.author
+
+
+    .main__section
+      h3 2014年度
+      .main__table
+        h4 心理
+        ul
+          -
+            var item = [
+                {
+                  title: '大学陸上競技選手の心理的競技能力の向上に関する研究', author: '唐本直登, 山下優嘉, 鏑木大樹, 根来健太',
+                  isCollaborate: true
+                },
+                {
+                  title: '大学生を対象とした筋力トレーニングに関する調査研究-心理的サポートによるモチベーションの維持・向上に着目して-',
+                  author: '小川令央那, 永井達成'
+                }
+              ]
+          each val in item
+            li
+              p 
+                span #{val.isCollaborate ? '★' : ''}
+                | #{val.title}
+              p.main__table__auth=val.author
+      .main__table
+        h4 スポーツ
+        ul
+          -
+            var item = [
+              {
+                title: '大学陸上競技選手の心理的競技能力の向上に関する研究', author: '唐本直登, 山下優嘉, 鏑木大樹, 根来健太'
+              },
+              {
+                title: '大学生を対象とした筋力トレーニングに関する調査研究-心理的サポートによるモチベーションの維持・向上に着目して-'
+              }
+            ]
+          each val in item
             li
               p 
                 span #{val.isCollaborate ? '★' : ''}
                 | #{val.title}
               p.main__table__auth=val.author
     .main__section
-      h3 2016年度
+      h3 2013年度
       .main__table
         h4 心理
         ul
-          each val in [{title: '大学陸上競技選手の心理的競技能力の向上に関する研究', author: '唐本直登, 山下優嘉, 鏑木大樹, 根来健太', isCollaborate: true}, {title: '大学生を対象とした筋力トレーニングに関する調査研究-心理的サポートによるモチベーションの維持・向上に着目して-',author: '小川令央那, 永井達成', isCollaborate: false}]
+          -
+            var item = [
+                {
+                  title: '大学陸上競技選手の心理的競技能力の向上に関する研究', author: '唐本直登, 山下優嘉, 鏑木大樹, 根来健太',
+                  isCollaborate: true
+                },
+                {
+                  title: '大学生を対象とした筋力トレーニングに関する調査研究-心理的サポートによるモチベーションの維持・向上に着目して-',
+                  author: '小川令央那, 永井達成'
+                }
+              ]
+          each val in item
             li
               p 
                 span #{val.isCollaborate ? '★' : ''}
@@ -58,17 +220,57 @@ block content
       .main__table
         h4 スポーツ
         ul
-          each val in [{title: '大学陸上競技選手の心理的競技能力の向上に関する研究', author: '唐本直登, 山下優嘉, 鏑木大樹, 根来健太', isCollaborate: true}, {title: '大学生を対象とした筋力トレーニングに関する調査研究-心理的サポートによるモチベーションの維持・向上に着目して-',author: '小川令央那, 永井達成', isCollaborate: false}]
+          -
+            var item = [
+              {
+                title: '大学陸上競技選手の心理的競技能力の向上に関する研究', author: '唐本直登, 山下優嘉, 鏑木大樹, 根来健太'
+              },
+              {
+                title: '大学生を対象とした筋力トレーニングに関する調査研究-心理的サポートによるモチベーションの維持・向上に着目して-'
+              }
+            ]
+          each val in item
             li
               p 
                 span #{val.isCollaborate ? '★' : ''}
                 | #{val.title}
               p.main__table__auth=val.author
-      
+    
+    .main__section
+      h3 2012年度
       .main__table
-        h4 IT
+        h4 心理
         ul
-          each val in [{title: '大学陸上競技選手の心理的競技能力の向上に関する研究', author: '唐本直登, 山下優嘉, 鏑木大樹, 根来健太', isCollaborate: true}, {title: '大学生を対象とした筋力トレーニングに関する調査研究-心理的サポートによるモチベーションの維持・向上に着目して-',author: '小川令央那, 永井達成', isCollaborate: false}]
+          -
+            var item = [
+                {
+                  title: '大学陸上競技選手の心理的競技能力の向上に関する研究', author: '唐本直登, 山下優嘉, 鏑木大樹, 根来健太',
+                  isCollaborate: true
+                },
+                {
+                  title: '大学生を対象とした筋力トレーニングに関する調査研究-心理的サポートによるモチベーションの維持・向上に着目して-',
+                  author: '小川令央那, 永井達成'
+                }
+              ]
+          each val in item
+            li
+              p 
+                span #{val.isCollaborate ? '★' : ''}
+                | #{val.title}
+              p.main__table__auth=val.author
+      .main__table
+        h4 スポーツ
+        ul
+          -
+            var item = [
+              {
+                title: '大学陸上競技選手の心理的競技能力の向上に関する研究', author: '唐本直登, 山下優嘉, 鏑木大樹, 根来健太'
+              },
+              {
+                title: '大学生を対象とした筋力トレーニングに関する調査研究-心理的サポートによるモチベーションの維持・向上に着目して-'
+              }
+            ]
+          each val in item
             li
               p 
                 span #{val.isCollaborate ? '★' : ''}
