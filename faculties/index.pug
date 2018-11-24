@@ -1,17 +1,17 @@
-extends ../includes/_layout
+extends ../layout/_pages
 
 block title
   title Faculties
   meta(name='description', content='Faculties/加藤研究室')
 
 block styles
-  link(rel='stylesheet', href='../styles/pages/faculties.css')
+  link(rel='stylesheet', href='/styles/pages/faculties.css')
 
 block content
   h2.main__title <span>F</span>aculties
   .main__body.u-flex.u-flex__wrap
-    include ../includes/data/_faculties
+    include ../data/_faculties
     each val in faculties
-      a(href=`faculties/${val.link}`).main__section
-        img.main__section__icon(src=`../../images/${val.image}`)
+      a(href=`items/${val.link}`).main__section
+        img.main__section__icon(src=`/images/${val.image}`)
         h2.main__section__name=val.name

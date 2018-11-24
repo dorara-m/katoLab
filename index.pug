@@ -6,7 +6,7 @@ html
     meta(name='description', content='')
     meta(name='viewport', content='width=device-width')
 
-    link(rel='stylesheet', href='styles/app.css')
+    link(rel='stylesheet', href='/styles/app.css')
   body
     .l-wrapper
       header.header--top.u-flex.u-flex__vertical: .l-container
@@ -14,7 +14,7 @@ html
         p.header--top__subtitle 心理とスポーツとIT研究室
       main.main--top: .l-container
         nav.nav--top: ul
-          include includes/data/_pages
+          include data/_pages
           each item in pages
               li.nav--top__item: h2: a(href=item.link)=item.name
         .copyright: p Created by MM

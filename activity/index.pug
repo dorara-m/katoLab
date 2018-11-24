@@ -1,11 +1,11 @@
-extends ../includes/_layout
+extends ../layout/_pages
 
 block title
-  title Events
-  meta(name='description', content='Events/加藤研究室')
+  title Activity
+  meta(name='description', content='Activity/加藤研究室')
 
 block styles
-  link(rel='stylesheet', href='../styles/pages/events.css')
+  link(rel='stylesheet', href='/styles/pages/events.css')
 
 block content
   h2.main__title
@@ -14,7 +14,7 @@ block content
   .main__body
     .main__section
       p 当研究室における学会活動、イベントなどを掲示しています。
-    include ../includes/data/_events
+    include ../data/_activity
     .main__section
       h3 2017年度
       ul.main__lists
