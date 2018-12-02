@@ -27,6 +27,7 @@
 		}
 	}
 	&__name {
+		font-family: $jaFont;
 		font-size: 18px;
 		font-weight: bold;
 		@include mq-up() {
