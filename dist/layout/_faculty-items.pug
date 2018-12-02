@@ -1,0 +1,30 @@
+extends _pages
+
+block title
+  title Faculty
+  meta(name='description', content='Faculty/加藤研究室')
+
+block styles
+  link(rel='stylesheet', href='/assets/styles/app.css')
+
+block content
+  .p-faculty
+    h1.main__title
+      a(href="/faculty/")
+        <span>F</span>aculty
+    .main__body
+      include ../data/_faculty
+      block teacher
+        - var teacher = faculty[0];
+      .p-faculty__intro
+        img(src=`/assets/images/${teacher.image}`)
+        h3=teacher.name
+          span=teacher.position
+      .main__section.p-faculty__text
+        h3 専攻
+        p #{teacher.field}
+        h3 連絡先
+        p: a.c-link(href=`mailto:${teacher.address}`)=teacher.address
+        h3 自己紹介
+        p=teacher.introduction
+        block add

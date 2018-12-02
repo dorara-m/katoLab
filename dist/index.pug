@@ -1,0 +1,27 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    title 加藤研究室
+    meta(name='description', content='加藤研究室')
+    meta(name='viewport', content='width=device-width,initial-scale=1.0')
+
+    link(rel='stylesheet', href='/assets/styles/app.css')
+  body
+    .l-wrapper.p-top__wrapper
+      header.p-top__header
+        .l-container
+          h1.p-top__header__title.u-mB5 KATO LAB.
+          p.p-top__header__subtitle 心理とスポーツとIT研究室
+      main.p-top__main
+        .l-container
+          nav.p-top__nav: ul
+            include data/_pages
+            each item in pages
+                li.p-top__nav__item: h2: a(href=item.link)=item.name
+        .l-footer
+          .copyright: p Created by MM
+        .p-top__bgSP
+          img.u-hidePC(src='/assets/images/apple-white.png')
+      .p-top__bgPC.u-hideSP
+        .p-top__bgPC__overlay
