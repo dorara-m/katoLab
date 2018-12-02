@@ -1,15 +1,18 @@
 extends ../layout/_pages
 
 block title
-  title Researches
-  meta(name='description', content='Researches/加藤研究室')
+  title Research
+  meta(name='description', content='Research/加藤研究室')
 
 block styles
-  link(rel='stylesheet', href='/styles/pages/researches.css')
+  link(rel='stylesheet', href='/assets/styles/app.css')
 
 block content
-  h2.main__title <span>R</span>esearch
-  .main__body
+  h1.main__title
+    span.initial R
+    | esearch
+    span.ja -研究一覧-
+  .p-research
     .main__section
       p 当研究室では<b>スポーツ, 心理, IT</b>の3ジャンルに渡る様々なテーマの研究活動を行っています。
       p.u-mT10 また、フィットネス器具の開発、バリアフリー環境の整備など、産学連携の共同研究にも取り組んでいます。

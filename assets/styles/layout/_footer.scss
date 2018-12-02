@@ -1,0 +1,20 @@
+.l-footer {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	padding: 0 30px;
+	height: 70px;
+	&__inner {
+		display: flex;
+		align-items: baseline;
+		justify-content: space-between;
+	}
+	&__img {
+		width: 50px;
+		height: 50px;
+	}
+  .copyright {
+		font-size: 12px;
+  }
+}

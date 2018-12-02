@@ -5,25 +5,27 @@ html
     meta(name='viewport', content='width=device-width')
 
     block title
-      title ぽよ
+      title page-title
     
     block styles
-      link(rel='stylesheet', href='/styles/pages/about.css')
+      link(rel='stylesheet', href='/assets/styles/app.css')
   body
     .l-wrapper
       header.l-header
-        .l-header__title.u-show
-          h1: a(href="../index.html") KATO LAB.
+        .l-header__title.u-hideSP
+          h1: a(href="/") KATO LAB.
           p 心理とスポーツとIT研究室
-        nav.l-header__menu: ul
+        ul.l-header__menu#js-menu
           include ../data/_pages
           each item in pages
-            li: h2
-              block menuLink
-                a(href=`/${item.link}` class=item.name)=item.name
+            li
+              a(href=`/${item.link}/` class=item.link)=item.name
       main.main
-        img(src='/images/apple-white.png').bgImg.u-show
+        img.bgImg.u-hideSP(src='/assets/images/apple-white.png')
         block content
-      footer.l-footer
-        a(href='/'): img.l-footer__img(src='/images/apple-black.png')
-        .copyright: p Created by MM
+      footer.u-hidePC.l-footer
+        .l-footer__inner
+          a(href='/'): img.l-footer__img(src='/assets/images/apple-black.png')
+          .copyright: p Created by MM
+      script(src="https://code.jquery.com/jquery-3.3.1.min.js",integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=", crossorigin="anonymous")
+      script(src="/assets/scripts/app.js")

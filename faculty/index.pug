@@ -1,0 +1,21 @@
+extends ../layout/_pages
+
+block title
+  title Faculty
+  meta(name='description', content='Faculty/加藤研究室')
+
+block styles
+  link(rel='stylesheet', href='/assets/styles/app.css')
+
+block content
+  .p-faculty
+    h1.main__title
+      span.initial F
+      | aculty
+      span.ja -教員紹介-
+    .p-faculty__wrap
+      include ../data/_faculty
+      each val in faculty
+        a(href=`${val.link}`).p-faculty__item
+          img.p-faculty__item__img(src=`/assets/images/${val.image}`)
+          p.p-faculty__item__name=val.name

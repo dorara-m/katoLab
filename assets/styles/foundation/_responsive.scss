@@ -5,7 +5,7 @@ $breakpoint-up: (
   'xl': 'screen and (min-width: 1200px)',
 ) !default;
 
-@mixin mq-up($breakpoint: md) {
+@mixin mq-up($breakpoint: lg) {
   @media #{map-get($breakpoint-up, $breakpoint)} {
     @content;
   }

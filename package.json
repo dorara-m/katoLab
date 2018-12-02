@@ -13,10 +13,13 @@
 	"license": "ISC",
 	"dependencies": {},
 	"devDependencies": {
-		"pug": "",
-		"node-sass": "^4",
+		"@pingy/cli": "^0.12.3",
+		"autoprefixer": "^9.3.1",
 		"babel-core": "^6",
 		"babel-preset-env": "^1",
-		"@pingy/cli": "^0.12.3"
+		"express-autoprefixer": "^5.4.0",
+		"node-sass": "^4",
+		"postcss": "^7.0.6",
+		"pug": ""
 	}
 }

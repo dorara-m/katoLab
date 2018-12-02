@@ -1,11 +1,11 @@
-.u-hide {
+.u-hidePC {
 	display: block;
 	@include mq-up() {
 		display: none;
 	}
 }
 
-.u-show {
+.u-hideSP {
   display: none;
   @include mq-up() {
     display: block;

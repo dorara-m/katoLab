@@ -1,13 +1,4 @@
-@import "foundations/_reset";
-@import "foundations/_base";
-@import "foundations/_responsive";
-
-@import "utilities/_margin";
-@import "utilities/_flex";
-@import "utilities/_display";
-
-.l-wrapper {
-	color: $black;
+.p-top__wrapper {
 	@include mq-up() {
 		width: 90%;
 		max-width: 960px;
@@ -15,18 +6,12 @@
 	}
 }
 
-.l-container {
-	width: 100%;
-	padding: 0 35px;
-	@include mq-up() {
-		padding: 0;
-	}	
-}
-
-.header--top {
+.p-top__header {
 	width: 100%;
 	height: 140px;
 	box-shadow:0px 2px 4px #999;
+	display: flex;
+	align-items: center;
 	@include mq-up() {
 		width: 335px;
 		box-shadow: none;
@@ -50,7 +35,7 @@
 	}
 }
 
-.main--top {
+.p-top__main {
 	height: calc(100vh - 140px);
 	font-family: $enFont;
 	@include mq-up() {
@@ -59,8 +44,9 @@
 	}
 }
 
-.nav--top {
+.p-top__nav {
 	padding-top: 40px;
+	padding-bottom: 70px;
 	@include mq-up() {
 		padding-top: 100px;
 	}
@@ -80,16 +66,7 @@
 	}
 }
 
-.copyright {
-	font-size: 12px;
-	position: absolute;
-	bottom: 20px;
-	@include mq-up() {
-		right: calc(50% + 40px);
-	}
-}
-
-.bgimg {
+.p-top__bgSP {
 	position: fixed;
 	right: -80px;
 	bottom: 20px;
@@ -100,13 +77,13 @@
 	}
 }
 
-.bg-pc {
+.p-top__bgPC {
 	position: fixed;
 	top: 0;
 	right: 0;
 	bottom: 0;
 	width: 50%;
-	background-image: url(../../images/apple.png);
+	background-image: url(/assets/images/apple.png);
 	background-repeat: no-repeat;
 	background-size: cover;
 	box-shadow: -1px 0px 4px #444;
@@ -114,4 +91,8 @@
 		background-color: rgba(0,0,0, 0.2);
 		height: 100%;
 	}
+}
+
+.p-top__copyright {
+	font-size: 12px;
 }
