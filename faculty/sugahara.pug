@@ -1,0 +1,14 @@
+extends ../layout/_faculty-items
+
+block title
+  title 菅原徹 @加藤研究室-東洋大学
+  meta(name='twitter:url', content='https://kato-lab.netlify.com/faculty/sugahara.html')
+  meta(property='og:url', content='https://kato-lab.netlify.com/faculty/sugahara.html')
+
+block teacher
+  - var teacher = faculty[2];
+
+block add
+  h3 HP
+  p
+    a(href='http://www.kanseismile.com/' target='_blank').c-link http://www.kanseismile.com/
