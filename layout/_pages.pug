@@ -1,11 +1,28 @@
 doctype html
 html
-  head
+  head(prefix='og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#')
     meta(charset='utf-8')
-    meta(name='viewport', content='width=device-width')
+    eta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name='viewport', content='width=device-width,initial-scale=1.0')
+    meta(name='robots', content='index,follow')
+    meta(name='format-detection', content='telephone=no')
+    meta(name='keywords', content='東洋大学 加藤, 東洋大学 加藤研究室, 加藤研究室, 加藤ゼミ, 心理とスポーツとIT研究室, 東洋大学 心理とスポーツとIT研究室, 東洋大学, 東洋大学 心理, 加藤千恵子, 綿貫慶徳, 菅原徹, 渋谷英雄')
+    meta(name='twitter:card', content='summary')
+    //- meta(name='twitter:image', content=ogp)
+    meta(property='og:site_name', content='加藤研究室-東洋大学')
+    meta(property='og:locale', content='ja_JP')
+    meta(property='og:type', content='article')
+    //- meta(property='og:image', content=ogp)
+    link(rel='shortcut icon', href='/favicon.ico')
+    link(rel='apple-touch-icon-precomposed', href='/apple-touch-icon.png')
 
     block title
       title page-title
+      //- meta(name='twitter:url', content=site.domain + directory)
+      //- meta(property='og:url', content=site.domain + directory)
+      meta(name='description', content='当研究室は、東洋大学川越キャンパスにある総合情報学部総合情報学科の学生と教員によって構成されている研究室です。')
+      meta(name='twitter:description', content='当研究室は、東洋大学川越キャンパスにある総合情報学部総合情報学科の学生と教員によって構成されている研究室です。')
+      meta(property='og:description', content='当研究室は、東洋大学川越キャンパスにある総合情報学部総合情報学科の学生と教員によって構成されている研究室です。')
     
     block styles
       link(rel='stylesheet', href='/assets/styles/app.css')
